@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import facebook
 import requests
-from transformers import pipeline
+#from transformers import pipeline
 import matplotlib.pyplot as plt
 import numpy as np
 from pysentimiento import create_analyzer
