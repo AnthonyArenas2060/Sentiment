@@ -8,3 +8,4 @@ requests
 numpy  
 torch
 tensorflow
+pysentimiento
