@@ -1,6 +1,6 @@
 streamlit
 streamlit-authenticator
-git+https://github.com/mobolic/facebook-sdk.git#egg=facebook-sdk
+facebook-sdk
 transformers
 pandas
 matplotlib
