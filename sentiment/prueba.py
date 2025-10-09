@@ -115,10 +115,9 @@ if token:
                 posts = graph.get_connections(id=page_id, connection_name="feed", since=date_ini, until=date_fin)
                 posteos = pd.DataFrame(posts['data'])
                 if not posteos.empty:
-                    if indice == 5:
-                        posteos.columns = ['Fecha', 'Mensaje', 'id', 'stories']
-                    else:
-                        posteos.columns = ['Fecha', 'Mensaje', 'id']  # , 'stories']
+                    posteos = posteos.iloc[:, :3]
+                    posteos.columns = ['Fecha', 'Mensaje', 'id']
+ 
                     posteos['Fecha'] = pd.to_datetime(posteos['Fecha'])
                     posteos['Fecha'] = posteos['Fecha'].dt.strftime('%Y-%m-%d')
 
