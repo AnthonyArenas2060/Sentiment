@@ -7,5 +7,4 @@ requests
 numpy  
 torch
 tensorflow
-pysentimiento
-tf_keras
+transformers
