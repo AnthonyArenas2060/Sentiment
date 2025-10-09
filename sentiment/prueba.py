@@ -5,7 +5,7 @@ import requests
 from transformers import pipeline
 import matplotlib.pyplot as plt
 import numpy as np
-
+from pysentimiento import create_analyzer
 
 import streamlit as st
 import streamlit_authenticator as stauth
@@ -194,8 +194,8 @@ if token:
 
                     
 
-                    a = pipeline("sentiment-analysis", model=r"https://github.com/AnthonyArenas2060/Sentiment/tree/main/robertuito-sentiment-analysis", tokenizer=r"https://github.com/AnthonyArenas2060/Sentiment/tree/main/robertuito-sentiment-analysis")
-
+                    #a = pipeline("sentiment-analysis", model=r"https://github.com/AnthonyArenas2060/Sentiment/tree/main/robertuito-sentiment-analysis", tokenizer=r"https://github.com/AnthonyArenas2060/Sentiment/tree/main/robertuito-sentiment-analysis")
+                    a = create_analyzer(task="sentiment", lang="es")
                     df = pd.DataFrame({"comentario": coments_gente})    
 
                     resultados = a(df["comentario"].tolist(),  truncation=True,  max_length=128)
