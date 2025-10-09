@@ -193,7 +193,7 @@ if token:
 
                     
 
-                    a = pipeline("sentiment-analysis", model=r"https://huggingface.co/pysentimiento/robertuito-sentiment-analysis", tokenizer=r"https://huggingface.co/pysentimiento/robertuito-sentiment-analysis")
+                    a = pipeline("sentiment-analysis", model=r"pysentimiento/robertuito-sentiment-analysis", tokenizer=r"pysentimiento/robertuito-sentiment-analysis")
                     df = pd.DataFrame({"comentario": coments_gente})    
 
                     resultados = a(df["comentario"].tolist(),  truncation=True,  max_length=128)
