@@ -247,10 +247,10 @@ if token:
                                 </style>
                             """, unsafe_allow_html=True)
                     st.download_button(
-                        label="📥 Descargar CSV",
+                        label="📥 Descargar Excel",
                         data=csv,
-                        file_name='sentiment.csv',
-                        mime='text/csv')
+                        file_name='sentiment.xlsx',
+                        mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
                 else:
                     st.write("No se encontraron publicaciones en el rango de fechas seleccionado.")
 
