@@ -225,7 +225,7 @@ if token:
                     ax.pie(y, labels=mylabels, colors=['green', 'gray', 'red'], autopct='%1.1f%%')
                     st.pyplot(fig)
                     st.markdown("Sentiment por comentario")
-                    st.dataframe(csv)
+                    st.dataframe(df_final)
                     #csv = df_final.to_excel(index=False)
                    
                     #st.download_button(
