@@ -224,33 +224,15 @@ if token:
                     # Generar gráfico de pastel
                     ax.pie(y, labels=mylabels, colors=['green', 'gray', 'red'], autopct='%1.1f%%')
                     st.pyplot(fig)
-
-                    csv = df_final.to_excel(index=False)
-                    st.markdown("""
-                                <style>
-                                div.stDownloadButton > button {
-                                    background-color: #1E90FF;
-                                    color: white;
-                                    padding: 0.6em 1.2em;
-                                    border-radius: 10px;
-                                    border: none;
-                                    font-size: 16px;
-                                    font-weight: bold;
-                                    cursor: pointer;
-                                    transition: all 0.3s ease;
-                                }
-                                div.stDownloadButton > button:hover {
-                                    background-color: #0073e6;
-                                    transform: scale(1.05);
-                                    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-                                }
-                                </style>
-                            """, unsafe_allow_html=True)
-                    st.download_button(
-                        label="📥 Descargar Excel",
-                        data=csv,
-                        file_name='sentiment.xlsx',
-                        mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+                    st.markdown("Sentiment por comentario")
+                    st.dataframe(csv)
+                    #csv = df_final.to_excel(index=False)
+                   
+                    #st.download_button(
+                    #   label="📥 Descargar Excel",
+                    #    data=csv,
+                    #    file_name='sentiment.xlsx',
+                    #    mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
                 else:
                     st.write("No se encontraron publicaciones en el rango de fechas seleccionado.")
 
