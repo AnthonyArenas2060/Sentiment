@@ -225,7 +225,7 @@ if token:
                     ax.pie(y, labels=mylabels, colors=['green', 'gray', 'red'], autopct='%1.1f%%')
                     st.pyplot(fig)
 
-                    csv = df_final.to_excel(index=False).encode('utf-8')
+                    csv = df_final.to_excel(index=False)
                     st.markdown("""
                                 <style>
                                 div.stDownloadButton > button {
